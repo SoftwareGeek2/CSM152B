@@ -3,9 +3,9 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 10/08/2025 11:05:57 AM
+// Create Date: 10/08/2025 11:01:45 AM
 // Design Name: 
-// Module Name: m21
+// Module Name: one_bit_alu
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -16,25 +16,18 @@
 // Revision:
 // Revision 0.01 - File Created
 // Additional Comments:
-
-
-
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module m21(
-    output Y,
-    input D0, D1, S
+module one_bit_alu(
+    input wire A,
+    input wire B,
+    input wire Cin,
+    output wire S,
+    output wire Cout
+    
+    );
     
     
-);
-
-wire T1, T2, Sbar;
-
-and(T1, D1, S);
-and(T2,D0, Sbar);
-not(Sbar, S);
-or(Y, T1, T2);
-
 endmodule
