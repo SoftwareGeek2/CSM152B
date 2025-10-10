@@ -1,33 +1,39 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/08/2025 11:01:45 AM
-// Design Name: 
-// Module Name: one_bit_alu
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
 module one_bit_alu(
-    input wire A,
-    input wire B,
-    input wire Cin,
-    output wire S,
-    output wire Cout
+    input clock,
+    input A,
+    input B,
+    input Cin,
+    input [1:0] S,
+    output Y,
+    output Cout 
     
     );
+    
+    wire notA, andAB, orAB, sum; // end res
+    wire xorAB, c1; // intermediates
+    
+    not(notA, A);
+    and(andAB, A, B);
+    or(orAB, A, B);
+    
+    xor(xorAB, A, B);
+    xor(sum, xorAB, Cin);
+    
+    and(c1, Cin, xorAB);
+    or(Cout, c1, andAB);
+    
+    m41 mux_alu (
+        .D({sum, orAB, andAB, notA}),
+        .S(S),
+        .Y(Y)
+    );
+    
+    
+    
+    
     
     
 endmodule
