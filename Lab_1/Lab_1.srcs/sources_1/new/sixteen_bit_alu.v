@@ -16,7 +16,9 @@ module sixteen_bit_alu(
   assign inc     = A + 16'd1;
   assign dec     = A - 16'd1;
   assign invert  = ~A;
-  assign lsl     = A << 1;
+  
+  
+  //assign lsl     = A(b'1,[14:0]);
   assign lsr     = A >> 1;
 
   wire signed [15:0] As = A;

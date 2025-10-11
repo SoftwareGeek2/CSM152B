@@ -1,26 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date: 10/08/2025 11:05:57 AM
-// Design Name: 
-// Module Name: m21
-// Project Name: 
-// Target Devices: 
-// Tool Versions: 
-// Description: 
-// 
-// Dependencies: 
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-
-
-
-// 
-//////////////////////////////////////////////////////////////////////////////////
 
 
 module m21_16(
@@ -32,14 +10,13 @@ module m21_16(
 );
 
 wire [15:0] T1, T2;
-//wire Sbar; Not needed anymore
 
-/**
-wire [15:0] Sel  = {16{S}}; //Replicate since structural Verilog requires gate operands to have same # of bits
-wire [15:0] Selbar;
-Not needed anymore
-*/ 
-
-assign Y = S ? D1 : D0;
-
+genvar i;
+generate
+    for(i = 0; i<16; i = i+1) begin: mux_loop
+        m21 genloop(.D0(D0[i]), .D1(D1[i]), .S(S), .Y(Y[i])
+        );
+        end
+    
+endgenerate
 endmodule

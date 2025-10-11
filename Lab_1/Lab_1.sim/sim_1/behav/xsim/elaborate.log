@@ -7,9 +7,9 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.m21
-Compiling module xil_defaultlib.m41
-Compiling module xil_defaultlib.one_bit_alu
+Compiling module xil_defaultlib.addbit
+Compiling module xil_defaultlib.adder_explicit
+Compiling module xil_defaultlib.adder_16bit
 Compiling module xil_defaultlib.tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_behav
