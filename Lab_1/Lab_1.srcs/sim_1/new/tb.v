@@ -4,21 +4,39 @@
 module tb;
     reg clock;
     
+    reg  [15:0] A;
+    reg  [15:0] B;
+    reg         Cin;
+    reg  [3:0]  S;
+    wire        Cout;
+    wire [15:0] Y;
     
     
-    reg [15:0] r1;
-    reg [15:0] r2;
-    reg ci; // carry in
-    wire [15:0] result;
-    wire carry; // carry out
     
-    adder_16bit uut(
-        .r1(r1),
-        .r2(r2),
-        .ci(ci), // carry in
-        .result(result),
-        .carry(carry) // carry out
+//    reg [15:0] r1;
+//    reg [15:0] r2;
+//    reg ci; // carry in
+//    wire [15:0] result;
+//    wire carry; // carry out
+    
+    
+    sixteen_bit_alu uut(
+        .clock(clock),
+        .A(A),
+        .B(B),
+        .Cin(Cin), // carry in
+        .Y(Y),
+        .Cout(Cout), // carry out
+        .S(S)
     );
+    
+//    adder_16bit uut(
+//        .r1(r1),
+//        .r2(r2),
+//        .ci(ci), // carry in
+//        .result(result),
+//        .carry(carry) // carry out
+//    );
     
     
 //    // --- 16:1 16-bit MUX test signals ---
@@ -49,12 +67,31 @@ module tb;
     
     initial begin
             clock = 0;
-            ci = 0;
+//            .D({lsr, lsl, asr, asl, invert, inc, dec, bit_and, bit_or, add, sub}),//Order is important
+            // ALU 'ADD' TEST
+            Cin = 0;
+            A = 16'b1000_0000_0000_0000;
+            B = 16'b0111_1111_1111_1111;
+            S = 4'b0001;
+            #10
             
-            r1 = 16'b1000_0000_0000_0000;
-            r2 = 16'b0111_1111_1111_1111;
+            // ALU 'INVERT' TEST
+            A = 16'b1000_0000_0000_0000; // invert is same 
+            B = 16'b0111_1111_1111_1111; //shouldnt matter
+            S = 4'b0110; // 6 -> invert
+            #10
+            A = 16'b0000_0001_0000_0000; // invert is ff00
             
-            # 10 
+            #10
+            
+//            ci = 0;
+            
+//            r1 = 16'b1000_0000_0000_0000;
+//            r2 = 16'b0111_1111_1111_1111;
+            
+//            # 10 
+
+
             // ---- 16:1 16-bit MUX SANITY TEST (quiet; only prints on failure) ----
             // Golden model helper: pick the k-th 16-bit lane from a 256-bit bus
 

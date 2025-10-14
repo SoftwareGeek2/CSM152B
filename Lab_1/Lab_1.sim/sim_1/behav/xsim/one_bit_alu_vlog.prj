@@ -1,0 +1,18 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Lab_1.srcs/sources_1/new/addbit.v" \
+"../../../../Lab_1.srcs/sources_1/new/adder_16bit.v" \
+"../../../../Lab_1.srcs/sources_1/new/adder_explicit.v" \
+"../../../../Lab_1.srcs/sources_1/new/m161.v" \
+"../../../../Lab_1.srcs/sources_1/new/m21.v" \
+"../../../../Lab_1.srcs/sources_1/new/m21_16.v" \
+"../../../../Lab_1.srcs/sources_1/new/m41.v" \
+"../../../../Lab_1.srcs/sources_1/new/m41_16.v" \
+"../../../../Lab_1.srcs/sources_1/new/sixteen_bit_alu.v" \
+"../../../../Lab_1.srcs/sim_1/new/tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

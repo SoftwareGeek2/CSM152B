@@ -3,6 +3,8 @@ Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
 Running: C:/Xilinx/Vivado/2018.2/bin/unwrapped/win64.o/xelab.exe -wto 90375068cf7a41f889b206c34d42a46a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot tb_behav xil_defaultlib.tb xil_defaultlib.glbl -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-2534] module m161 does not have a parameter named W [C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.srcs/sources_1/new/sixteen_bit_alu.v:51]
+WARNING: [VRFC 10-278] actual bit length 176 differs from formal bit length 256 for port D [C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.srcs/sources_1/new/sixteen_bit_alu.v:52]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -10,6 +12,11 @@ Time Resolution for simulation is 1ps
 Compiling module xil_defaultlib.addbit
 Compiling module xil_defaultlib.adder_explicit
 Compiling module xil_defaultlib.adder_16bit
+Compiling module xil_defaultlib.m21
+Compiling module xil_defaultlib.m21_16_default
+Compiling module xil_defaultlib.m41_16
+Compiling module xil_defaultlib.m161
+Compiling module xil_defaultlib.sixteen_bit_alu
 Compiling module xil_defaultlib.tb
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot tb_behav
