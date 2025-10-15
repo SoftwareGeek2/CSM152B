@@ -83,6 +83,17 @@ module tb;
             A = 16'b0000_0001_0000_0000; // invert is ff00
             
             #10
+            A = 16'b1000_0000_0000_0000; // invert is same 
+            B = 16'b0111_1111_1111_1111; //shouldnt matter
+            S = 4'b0000; // 6 -> invert
+            #10//result should be 1
+            
+            A = 16'b1111_1111_1111_1111; // invert is same 
+            B = 16'b0111_1111_1111_1111; //shouldnt matter
+            S = 4'b0000; // 6 -> invert
+            #10//result should be 1           
+            
+            // ALU 'SUB' TEST
             
 //            ci = 0;
             
