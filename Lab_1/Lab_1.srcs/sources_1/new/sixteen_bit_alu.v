@@ -55,11 +55,11 @@ module sixteen_bit_alu(
     // Second - add 1 (~B + 1)
     adder_16bit neg_add_B (.r1(notB), .r2(16'b0), .ci(1'b1), .carry(neg_carry), .result(invert_b));
     
-    //Now invert Cin
-    wire notCin;
-    not(notCin, Cin);
+    //Now invert Cin WRONG (Causes extra +1)
+    //wire notCin;
+    //not(notCin, Cin);
     wire carry_sub_raw; //Use this to carry notCin
-    adder_16bit find_sub (.r1(A), .r2(invert_b), .ci(notCin), .carry(carry_sub_raw), .result(sub));
+    adder_16bit find_sub (.r1(A), .r2(invert_b), .ci(Cin), .carry(carry_sub_raw), .result(sub));
 
 
   wire signed [15:0] As = A;
