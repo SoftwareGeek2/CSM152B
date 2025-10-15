@@ -58,7 +58,7 @@ module sixteen_bit_alu(
     //Now invert Cin WRONG (Causes extra +1)
     //wire notCin;
     //not(notCin, Cin);
-    wire carry_sub_raw; //Use this to carry notCin
+    wire carry_sub_raw; //Use this to carry notCin //Just Cin actually
     adder_16bit find_sub (.r1(A), .r2(invert_b), .ci(Cin), .carry(carry_sub_raw), .result(sub));
 
 
@@ -78,6 +78,11 @@ module sixteen_bit_alu(
             and(bit_and[i], A[i], B[i]);
         end
   endgenerate
+  
+  //DECREMENT
+    adder_16bit decrement (.r1(A), .r2(16'b1111_1111_1111), .ci(1'b0), .carry(Cout), .result(dec));
+  //INCREMENT
+  adder_16bit increment (.r1(A), .r2(16'b1), .ci(1'b0), .carry(Cout), .result(inc));
 
   // Flattened-bus 16:1 mux
   m161 #(.W(16), .N(11)) mux_alu (

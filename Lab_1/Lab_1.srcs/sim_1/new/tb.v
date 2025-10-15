@@ -85,13 +85,23 @@ module tb;
             #10
             A = 16'b1000_0000_0000_0000; // invert is same 
             B = 16'b0111_1111_1111_1111; //shouldnt matter
-            S = 4'b0000; // 6 -> invert
+            S = 4'b0000;
             #10//result should be 1
             
             A = 16'b1111_1111_1111_1111; // invert is same 
             B = 16'b0111_1111_1111_1111; //shouldnt matter
-            S = 4'b0000; // 6 -> invert
-            #10//result should be 1           
+            S = 4'b0000;
+            #10//result should be 1      
+            
+            A = 16'b1111_1111_1111_1111; // invert is same 
+            B = 16'b0111_1111_1111_1111; //shouldnt matter
+            S = 4'b0100;// Decrement A
+            #10//result should be 1
+            
+            A = 16'b1111_1111_1111_1111; // invert is same 
+            B = 16'b0111_1111_1111_1111; //shouldnt matter
+            S = 4'b0101;// Increment A
+            #10//result should be 1      
             
             // ALU 'SUB' TEST
             
