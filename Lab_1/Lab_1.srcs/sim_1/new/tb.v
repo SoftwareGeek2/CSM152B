@@ -10,6 +10,7 @@ module tb;
     reg  [3:0]  S;
     wire        Cout;
     wire [15:0] Y;
+    wire zero;
     
     
     
@@ -27,7 +28,8 @@ module tb;
         .Cin(Cin), // carry in
         .Y(Y),
         .Cout(Cout), // carry out
-        .S(S)
+        .S(S),
+        .zero_Out(zero_Out)
     );
     
 //    adder_16bit uut(

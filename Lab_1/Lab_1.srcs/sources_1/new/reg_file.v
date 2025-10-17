@@ -26,12 +26,8 @@ module reg_file(
             if (WrEn) begin
                 regs[tempW -: 16] = busW;
             end
-            if (Ra) begin
-                busA = regs[tempA -: 16];
-            end 
-            if (Rb) begin
-                busB = regs[tempB -: 16];
-            end
+            busA = regs[tempA -: 16];
+            busB = regs[tempB -: 16];
         end
         
             

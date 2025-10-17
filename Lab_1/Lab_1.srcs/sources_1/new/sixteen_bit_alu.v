@@ -5,7 +5,8 @@ module sixteen_bit_alu(
   input         Cin,
   input  [3:0]  S,
   output        Cout,
-  output [15:0] Y
+  output [15:0] Y,
+  output zero_Out
 );
   //reg [255:0] final_result;
   wire [15:0] sub, add, bit_or, bit_and, dec, inc, invert, invert_b, asl, asr, lsl, lsr, slte, slte_helper;
@@ -128,6 +129,9 @@ module sixteen_bit_alu(
     
     wire zero_sub;
     not (zero_sub, or_acc[15]);     // zero_sub = 1 iff sub == 0
+    or(zero, zero_sub, 0);
+    
+    
     
     // slte_scalar = (sub[15] | zero_sub) ? V
     wire sub_msb_or_zero, slte_scalar;
@@ -144,4 +148,28 @@ module sixteen_bit_alu(
     .S(S),
     .Y(Y)
   );
+  
+ wire [15:0] nY;
+ genvar k;
+ generate
+    for(k=0; k<16;k = k+1) begin
+        not(nY[k], Y[k]);
+    end
+endgenerate//nY = ALL 1's
+
+ wire [15:0] zero_help;
+  
+  or (zero_help[0], nY[0], 1'b0);   // seed: zero_help[0] = nY[0]
+  generate
+    for (z = 1; z < 16; z = z + 1) begin : Set_ZBit
+      and (zero_help[z], zero_help[z-1], Y[z]); // Ripple carry the result of the AND
+    end
+  endgenerate
+  
+  or(zero_Out, zero_help[15], 0);
+  
+  //not (zero_sub, or_acc[15]);     // zero_sub = 1 iff sub == 0
+  //or(zero, zero_sub, 0);
+ 
+  
 endmodule
