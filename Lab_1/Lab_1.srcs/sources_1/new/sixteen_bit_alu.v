@@ -150,23 +150,24 @@ module sixteen_bit_alu(
   );
   
  wire [15:0] nY;
+ wire [14:0] and_chain;
  genvar k;
  generate
     for(k=0; k<16;k = k+1) begin
         not(nY[k], Y[k]);
     end
-endgenerate//nY = ALL 1's
-
- wire [15:0] zero_help;
+ endgenerate//nY = ALL 1's
   
-  or (zero_help[0], nY[0], 1'b0);   // seed: zero_help[0] = nY[0]
+  and (and_chain[0], nY[0], nY[1]);   
   generate
-    for (z = 1; z < 16; z = z + 1) begin : Set_ZBit
-      and (zero_help[z], zero_help[z-1], Y[z]); // Ripple carry the result of the AND
+    for (k = 1; k < 15; k = k + 1) begin : Set_KBit
+      and (and_chain[k], and_chain[k-1], nY[k+1]); // Ripple carry the result of the AND
     end
   endgenerate
   
-  or(zero_Out, zero_help[15], 0);
+  and (zero_Out, and_chain[14], 1'b1);
+  
+//  or(zero_Out, zero_help[15], 0);
   
   //not (zero_sub, or_acc[15]);     // zero_sub = 1 iff sub == 0
   //or(zero, zero_sub, 0);

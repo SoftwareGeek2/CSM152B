@@ -2,11 +2,11 @@
 # Webtalk v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Mon Oct 13 11:41:49 2025
-# Process ID: 12944
-# Current directory: C:/Users/Student/Desktop/152BFall25/Lab_1/Lab_1.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/Student/Desktop/152BFall25/Lab_1/Lab_1.sim/sim_1/behav/xsim/xsim.dir/one_bit_alu_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/Student/Desktop/152BFall25/Lab_1/Lab_1.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/Student/Desktop/152BFall25/Lab_1/Lab_1.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Fri Oct 17 12:37:46 2025
+# Process ID: 27296
+# Current directory: C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.sim/sim_1/behav/xsim/xsim.dir/tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/Student/Desktop/152BFall25/Lab_1/Lab_1.sim/sim_1/behav/xsim/xsim.dir/one_bit_alu_behav/webtalk/xsim_webtalk.tcl -notrace
+source C:/Users/forsh/Desktop/M152B -notrace

@@ -14,5 +14,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/forsh/Desktop/M152B Labs/L
 INFO: [VRFC 10-311] analyzing module m41_16
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.srcs/sources_1/new/sixteen_bit_alu.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sixteen_bit_alu
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.srcs/sources_1/new/sixteen_bit_alu.v:132]
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.srcs/sim_1/new/tb.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module tb
+INFO: [VRFC 10-2458] undeclared symbol zero_Out, assumed default net type wire [C:/Users/forsh/Desktop/M152B Labs/Lab_1/Lab_1.srcs/sim_1/new/tb.v:32]
