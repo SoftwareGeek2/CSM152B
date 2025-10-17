@@ -21,7 +21,7 @@ module sixteen_bit_alu(
   assign lsl     = {A[14:0],1'b0};
   assign asl  = {A[14:0],1'b0};
   assign   lsr     = {1'b0, A[14:0]};
-  assign   asr     = {A[15], A[15:1]};
+  assign   asr     = {A[15], A[15:1]}; //Can we do this?
 
 
   // adder  
@@ -86,13 +86,58 @@ module sixteen_bit_alu(
   adder_16bit increment (.r1(A), .r2(16'b1), .ci(1'b0), .carry(Cout), .result(inc));
   
   //SLTE
-  adder_16bit slte_help (.r1(sub), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout), .result(slte_helper));
-  generate
-    for(i=0; i<16; i=i+1) begin: gen_SLTE
-        or(slte[i], slte_helper[15], 1'b0);
-    end
-  endgenerate
+//  adder_16bit slte_help (.r1(sub), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout), .result(slte_helper));
+//  generate
+//    for(i=0; i<16; i=i+1) begin: gen_SLTE
+//        or(slte[i], slte_helper[15], 1'b0);
+//    end
+//  endgenerate
 
+//  // --- overflow-correct SLTE: flip SLTE if subtraction overflowed ---
+//  // V = (A ^ B) & (A ^ sub)
+//  wire axb, axs, V;
+//  xor (axb, A[15], B[15]);
+//  xor (axs, A[15], sub[15]);
+//  and (V, axb, axs);
+  
+//  // slte_fixed = slte ^ {16{V}}  (bitwise negate SLTE when V=1)
+//  wire [15:0] slte_fixed;
+//  generate
+//    for (i = 0; i < 16; i = i + 1) begin : GEN_SLTE_OVERFLOW_FIX
+//       xor (slte_fixed[i], slte[i], V);
+//    end
+//  endgenerate
+
+    // --- SLTE (A <= B?) Use SUB with overflow correction ---
+    // V = (A ? B) & (A ? sub)
+    wire axb, axs, V;
+    xor (axb, A[15], B[15]);
+    xor (axs, A[15], sub[15]);
+    and (V,   axb,   axs); //V = 1 iff overflow occured
+    
+    // Was the result of the subtraction 0?
+    wire [15:0] or_acc;
+    
+    or (or_acc[0], sub[0], 1'b0);   // seed: or_acc[0] = sub[0]
+    genvar z;
+    generate
+      for (z = 1; z < 16; z = z + 1) begin : Ripple_OR
+        or (or_acc[z], or_acc[z-1], sub[z]); // Ripple carry the result of the OR
+      end
+    endgenerate
+    
+    wire zero_sub;
+    not (zero_sub, or_acc[15]);     // zero_sub = 1 iff sub == 0
+    
+    // slte_scalar = (sub[15] | zero_sub) ? V
+    wire sub_msb_or_zero, slte_scalar;
+    or  (sub_msb_or_zero, sub[15], zero_sub);
+    xor (slte_scalar,     sub_msb_or_zero, V);
+    generate
+      for (z = 0; z < 16; z = z + 1) begin : Set_SLTE
+        or (slte[z], slte_scalar, 1'b0);
+    end
+    endgenerate
   // Flattened-bus 16:1 mux
   m161 mux_alu (
     .D({asr, filler_3, asl, filler_2, lsr, slte, lsl, filler_1, invert, inc, dec, bit_and, bit_or, add, sub}),//Order is important
