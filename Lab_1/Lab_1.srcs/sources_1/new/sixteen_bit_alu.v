@@ -137,7 +137,7 @@ module sixteen_bit_alu(
       for (z = 0; z < 16; z = z + 1) begin : Set_SLTE
         or (slte[z], slte_scalar, 1'b0);
     end
-    endgenerate
+    endgenerate//{16{slte_scalar}}
   // Flattened-bus 16:1 mux
   m161 mux_alu (
     .D({asr, filler_3, asl, filler_2, lsr, slte, lsl, filler_1, invert, inc, dec, bit_and, bit_or, add, sub}),//Order is important

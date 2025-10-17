@@ -67,13 +67,75 @@ module tb;
     
     initial begin
             clock = 0;
-//            .D({lsr, lsl, asr, asl, invert, inc, dec, bit_and, bit_or, add, sub}),//Order is important
+//            .D({asr, filler_3, asl, filler_2, lsr, slte, lsl, filler_1, invert, inc, dec, bit_and, bit_or, add, sub}), //Order is important, 0 at right-end
+            Cin = 0;
+            #10 //Subtract test
+            A = 16'b1000_0000_0000_0000; // 0x8000
+            B = 16'b0111_1111_1111_1111; //0x7FFF
+            S = 4'b0000; // 0 -> Subtract
+            #10//result should be 0x0001
+            
+            A = 16'b1111_1111_1111_1111; // -1 - 32767 = -32768
+            B = 16'b0111_1111_1111_1111; //
+            S = 4'b0000;
+            #10//result should be 0x8000 
+            
+            A = 16'h8000; // -32768 - 1 = 32767
+            B = 16'h0001; //
+            S = 4'b0000;
+           #10//result should be 0x7fff       
+            
             // ALU 'ADD' TEST
             Cin = 0;
             A = 16'b1000_0000_0000_0000;
             B = 16'b0111_1111_1111_1111;
             S = 4'b0001; //Result : 0xFFFF
             #10//
+             // add overflow 
+            A = 16'b0001_0000_0000_0000;
+            B = 16'b1111_1111_1111_1111;
+            S = 4'b0001; //Result : 0x0FFF
+            #10//
+            
+            // OR: 0xA5A5 | 0x0F0F = 0xAFAF
+            Cin = 1'b0;
+            A   = 16'b1010_0101_1010_0101; // 0xA5A5
+            B   = 16'b0000_1111_0000_1111; // 0x0F0F
+            S   = 4'b0010;                 // OR
+            #10; // expect Y = 0xAFAF
+     
+            // OR: 0x0000 | 0x0000 = 0x0000
+            Cin = 1'b0;
+            A   = 16'b0000_0000_0000_0000; // 0x0000
+            B   = 16'b0000_0000_0000_0000; // 0x0000
+            S   = 4'b0010;                 // OR
+            #10; // expect Y = 0x0000
+            
+            // AND: 0xA5A5 & 0x0F0F = 0x0505
+            Cin = 1'b0;
+            A   = 16'b1010_0101_1010_0101; // 0xA5A5
+            B   = 16'b0000_1111_0000_1111; // 0x0F0F
+            S   = 4'b0011;                 // AND
+            #10; // expect Y = 0x0505
+     
+            // AND: 0xFFFF & 0x0000 = 0x0000
+            Cin = 1'b0;
+            A   = 16'b1111_1111_1111_1111; // 0xFFFF
+            B   = 16'b0000_0000_0000_0000; // 0x0000
+            S   = 4'b0011;                 // AND
+            #10; // expect Y = 0x0000
+
+            //Decrement test
+            A = 16'b1111_1111_1111_1111; // 
+            B = 16'b0111_1111_1111_1111; //
+            S = 4'b0100;// Decrement A
+            #10//result should be FFFE
+            
+            // Increment test
+            A = 16'b1111_1111_1111_1111; //  
+            B = 16'b0111_1111_1111_1111; //
+            S = 4'b0101;// Increment A
+            #10//result should be 0
             
             // ALU 'INVERT' TEST
             A = 16'b1000_0000_0000_0000; // invert is same (0x8000)
@@ -82,28 +144,64 @@ module tb;
             #10
             A = 16'b0000_0001_0000_0000; // invert is ff00
             
-            #10 //Subtract test
-            A = 16'b1000_0000_0000_0000; // 0x8000
-            B = 16'b0111_1111_1111_1111; //0x7FFF
-            S = 4'b0000; // 0 -> Subtract
-            #10//result should be 0x0001
+            // ASL: 0x0003 <<< 1 = 0x0006
+            Cin = 1'b0;
+            A   = 16'b0000_0000_0000_0011; // 0x0003
+            B   = 16'b0000_0000_0000_0000; // don't care
+            S   = 4'b1100;                 // ASL
+            #10; // expect Y = 0x0006
+     
+            // ASL: 0x8001 <<< 1 = 0x0002
+            Cin = 1'b0;
+            A   = 16'b1000_0000_0000_0001; // 0x8001
+            B   = 16'b0000_0000_0000_0000; // don't care
+            S   = 4'b1100;                 // ASL
+            #10; // expect Y = 0x0002
             
-            A = 16'b1111_1111_1111_1111; // 
-            B = 16'b0111_1111_1111_1111; //
-            S = 4'b0000;
-            #10//result should be 0x8000      
+            // ASR (neg): 0x8001 >>> 1 = 0xC000
+            Cin = 1'b0;
+            A   = 16'b1000_0000_0000_0001; // 0x8001
+            B   = 16'b0000_0000_0000_0000; // don't care
+            S   = 4'b1110;                 // ASR
+            #10; // expect Y = 0xC000
+     
+            // ASR (pos): 0x7FFE >>> 1 = 0x3FFF
+            Cin = 1'b0;
+            A   = 16'b0111_1111_1111_1110; // 0x7FFE
+            B   = 16'b0000_0000_0000_0000; // don't care
+            S   = 4'b1110;                 // ASR
+            #10; // expect Y = 0x3FFF
             
-            //Decrement test
-            A = 16'b1111_1111_1111_1111; // 
-            B = 16'b0111_1111_1111_1111; //
-            S = 4'b0100;// Decrement A
-            #10//result should be FFFE
+            // LSL: 0x0003 << 1 = 0x0006
+            Cin = 1'b0;
+            A   = 16'b0000_0000_0000_0011; // 0x0003
+            B   = 16'b0000_0000_0000_0000; // don't care
+            S   = 4'b1000;                 // LSL
+            #10; // expect Y = 0x0006
+     
+            // LSL: 0x8001 << 1 = 0x0002 (MSB drops)
+            Cin = 1'b0;
+            A   = 16'b1000_0000_0000_0001; // 0x8001
+            B   = 16'b0000_0000_0000_0000; // don't care
+            S   = 4'b1000;                 // LSL
+            #10; // expect Y = 0x0002
             
-            A = 16'b1111_1111_1111_1111; //  
-            B = 16'b0111_1111_1111_1111; //
-            S = 4'b0101;// Increment A
-            #10//result should be 0
+            // LSR: 0x8001 >> 1 = 0x4000
+            Cin = 1'b0;
+            A   = 16'b1000_0000_0000_0001; // 0x8001
+            B   = 16'b0000_0000_0000_0000; // don't care
+            S   = 4'b1010;                 // LSR
+            #10; // expect Y = 0x4000
+     
+            // LSR: 0x0002 >> 1 = 0x0001
+            Cin = 1'b0;
+            A   = 16'b0000_0000_0000_0010; // 0x0002
+            B   = 16'b0000_0000_0000_0000; // don't care
+            S   = 4'b1010;                 // LSR
+            #10; // expect Y = 0x0001
             
+            // SLTE test
+            #10 
             A = 16'b0111_1111_1111_1111; //
             B = 16'b0011_1111_1111_1111; //
             S = 4'b1001;// SLTE
@@ -124,6 +222,15 @@ module tb;
             B = 16'b0111_1111_1111_1111; // 2^16-1 = 32767
             S = 4'b1001;// SLTE
             #10//should be TRUE (1111_1111_1111_1111) // Failing due to negative sign overflow
+            
+            
+            
+            
+            
+            
+            
+            
+     
 //            ci = 0;
             
 //            r1 = 16'b1000_0000_0000_0000;
