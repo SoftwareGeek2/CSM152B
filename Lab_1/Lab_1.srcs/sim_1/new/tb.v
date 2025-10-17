@@ -72,39 +72,53 @@ module tb;
             Cin = 0;
             A = 16'b1000_0000_0000_0000;
             B = 16'b0111_1111_1111_1111;
-            S = 4'b0001;
-            #10
+            S = 4'b0001; //Result : 0xFFFF
+            #10//
             
             // ALU 'INVERT' TEST
-            A = 16'b1000_0000_0000_0000; // invert is same 
+            A = 16'b1000_0000_0000_0000; // invert is same (0x8000)
             B = 16'b0111_1111_1111_1111; //shouldnt matter
             S = 4'b0110; // 6 -> invert
             #10
             A = 16'b0000_0001_0000_0000; // invert is ff00
             
-            #10
-            A = 16'b1000_0000_0000_0000; // invert is same 
-            B = 16'b0111_1111_1111_1111; //shouldnt matter
-            S = 4'b0000;
-            #10//result should be 1
+            #10 //Subtract test
+            A = 16'b1000_0000_0000_0000; // 0x8000
+            B = 16'b0111_1111_1111_1111; //0x7FFF
+            S = 4'b0000; // 0 -> Subtract
+            #10//result should be 0x0001
             
-            A = 16'b1111_1111_1111_1111; // invert is same 
-            B = 16'b0111_1111_1111_1111; //shouldnt matter
+            A = 16'b1111_1111_1111_1111; // 
+            B = 16'b0111_1111_1111_1111; //
             S = 4'b0000;
-            #10//result should be 1      
+            #10//result should be 0x8000      
             
-            A = 16'b1111_1111_1111_1111; // invert is same 
-            B = 16'b0111_1111_1111_1111; //shouldnt matter
+            //Decrement test
+            A = 16'b1111_1111_1111_1111; // 
+            B = 16'b0111_1111_1111_1111; //
             S = 4'b0100;// Decrement A
-            #10//result should be 1
+            #10//result should be FFFE
             
-            A = 16'b1111_1111_1111_1111; // invert is same 
-            B = 16'b0111_1111_1111_1111; //shouldnt matter
+            A = 16'b1111_1111_1111_1111; //  
+            B = 16'b0111_1111_1111_1111; //
             S = 4'b0101;// Increment A
-            #10//result should be 1      
+            #10//result should be 0
             
-            // ALU 'SUB' TEST
+            A = 16'b0111_1111_1111_1111; //
+            B = 16'b0011_1111_1111_1111; //
+            S = 4'b1001;// SLTE
+            #10//should be FALSE (0000_0000_0000_0000)
+               
             
+            A = 16'b1111_1111_1111_1111; //
+            B = 16'b1111_1111_1111_1111; //
+            S = 4'b1001;// SLTE
+            #10//should be TRUE (1111_1111_1111_1111)
+            
+            A = 16'b1111_1111_1111_1111; //
+            B = 16'b1111_1111_1111_1111; //
+            S = 4'b1001;// SLTE
+            #10//should be TRUE (1111_1111_1111_1111)
 //            ci = 0;
             
 //            r1 = 16'b1000_0000_0000_0000;

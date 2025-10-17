@@ -8,8 +8,8 @@ module sixteen_bit_alu(
   output [15:0] Y
 );
   //reg [255:0] final_result;
-  wire [15:0] sub, add, bit_or, bit_and, dec, inc, invert, invert_b, asl, asr, lsl, lsr, slte;
-
+  wire [15:0] sub, add, bit_or, bit_and, dec, inc, invert, invert_b, asl, asr, lsl, lsr, slte, slte_helper;
+  wire [15:0] filler_1, filler_2, filler_3;
 //  assign add     = A + B + Cin;
 //  assign sub     = A - B - Cin;
 //  assign bit_or  = A | B;
@@ -80,13 +80,22 @@ module sixteen_bit_alu(
   endgenerate
   
   //DECREMENT
-    adder_16bit decrement (.r1(A), .r2(16'b1111_1111_1111), .ci(1'b0), .carry(Cout), .result(dec));
+    adder_16bit decrement (.r1(A), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout), .result(dec));
+    
   //INCREMENT
   adder_16bit increment (.r1(A), .r2(16'b1), .ci(1'b0), .carry(Cout), .result(inc));
+  
+  //SLTE
+  adder_16bit slte_help (.r1(sub), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout), .result(slte_helper));
+  generate
+    for(i=0; i<16; i=i+1) begin: gen_SLTE
+        or(slte[i], slte_helper[15], 1'b0);
+    end
+  endgenerate
 
   // Flattened-bus 16:1 mux
-  m161 #(.W(16), .N(11)) mux_alu (
-    .D({slte, lsr, lsl, asr, asl, invert, inc, dec, bit_and, bit_or, add, sub}),//Order is important
+  m161 mux_alu (
+    .D({asr, filler_3, asl, filler_2, lsr, slte, lsl, filler_1, invert, inc, dec, bit_and, bit_or, add, sub}),//Order is important
     .S(S),
     .Y(Y)
   );
