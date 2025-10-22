@@ -6,11 +6,13 @@ module sixteen_bit_alu(
   input  [3:0]  S,
   output        Cout,
   output [15:0] Y,
-  output zero_Out
+  output zero_Out,
+  output overflow
 );
   //reg [255:0] final_result;
   wire [15:0] sub, add, bit_or, bit_and, dec, inc, invert, invert_b, asl, asr, lsl, lsr, slte, slte_helper;
   wire [15:0] filler_1, filler_2, filler_3;
+  wire Cout_add, Cout_sub, Cout_inc, Cout_dec, Cout_asl;
 //  assign add     = A + B + Cin;
 //  assign sub     = A - B - Cin;
 //  assign bit_or  = A | B;
@@ -19,20 +21,61 @@ module sixteen_bit_alu(
 //  assign dec     = A - 16'd1;
 //  assign invert  = ~A;
   
-  assign lsl     = {A[14:0],1'b0};
-  assign asl  = {A[14:0],1'b0};
-  assign   lsr     = {1'b0, A[14:0]};
-  assign   asr     = {A[15], A[15:1]}; //Can we do this?
-
+  
+  integer b_times;
+//  genvar b_times;
+//  generate
+//      for(b_times = 0; b_times < 16; b_times = b_times+1) begin:copy_B
+//          or(filler_1[b_times], B[b_times], 1'b0);
+//      end
+//  endgenerate
+  
+//  always @(*) begin
+//      for(b_times = 0; b_times<16; b_times = b_times+1) begin:shift_Btimes
+//          assign lsl     = {A[14:0],1'b0};
+//          assign asl  = {A[14:0],1'b0};
+//          assign   lsr     = {1'b0, A[14:0]};
+//          assign   asr     = {A[15], A[15:1]}; //Can we do this?
+//      end
+//  end
+    genvar i;
+ 
+    // Logical shift left
+    generate
+        for (i = 0; i < 16; i = i + 1) begin : gen_lsl
+            assign lsl[i] = (i >= B) ? A[i - B] : 1'b0;
+        end
+    endgenerate
+ 
+    // Arithmetic shift left (same as logical for unsigned left shift)
+    generate
+        for (i = 0; i < 16; i = i + 1) begin : gen_asl
+            assign asl[i] = (i >= B) ? A[i - B] : 1'b0;
+        end
+    endgenerate
+ 
+    // Logical shift right
+    generate
+        for (i = 0; i < 16; i = i + 1) begin : gen_lsr
+            assign lsr[i] = (i + B < 16) ? A[i + B] : 1'b0;
+        end
+    endgenerate
+ 
+    // Arithmetic shift right
+    generate
+        for (i = 0; i < 16; i = i + 1) begin : gen_asr
+            assign asr[i] = (i + B < 16) ? A[i + B] : A[15];
+        end
+    endgenerate
 
   // adder  
-  adder_16bit find_sum (.r1(A), .r2(B), .ci(Cin), .carry(Cout), .result(add));
+  adder_16bit find_sum (.r1(A), .r2(B), .ci(Cin), .carry(Cout_add), .result(add));
 
   // invert (-A = ~A + 1)
   // First - invert (~A)
   wire [15:0] notA; // ~A
   wire neg_carry; // carryout for invert (doubt needed, but just incase)
-  genvar i;
+  //genvar i;
   generate
     for(i = 0; i<16; i=i+1) begin: negate_loop
         not(notA[i],A[i]);
@@ -40,7 +83,7 @@ module sixteen_bit_alu(
   endgenerate
   
   // Second - add 1 (~A + 1)
-  adder_16bit neg_add (.r1(notA), .r2(16'b0), .ci(1'b1), .carry(neg_carry), .result(invert));
+  adder_16bit neg_add (.r1(notA), .r2(16'b0), .ci(1'b1), .carry(Cout_sub), .result(invert));
   
   // invert (-B = ~B + 1)
     // First - invert (~B)
@@ -81,10 +124,10 @@ module sixteen_bit_alu(
   endgenerate
   
   //DECREMENT
-    adder_16bit decrement (.r1(A), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout), .result(dec));
+    adder_16bit decrement (.r1(A), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout_dec), .result(dec));
     
   //INCREMENT
-  adder_16bit increment (.r1(A), .r2(16'b1), .ci(1'b0), .carry(Cout), .result(inc));
+  adder_16bit increment (.r1(A), .r2(16'b1), .ci(1'b0), .carry(Cout_inc), .result(inc));
   
   //SLTE
 //  adder_16bit slte_help (.r1(sub), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout), .result(slte_helper));
@@ -149,6 +192,12 @@ module sixteen_bit_alu(
     .Y(Y)
   );
   
+  m61 mux_cout (
+    .D({asr, filler_3, Cout_asl, filler_2, lsr, slte, lsl, filler_1, invert, Cout_inc, Cout_dec, bit_and, bit_or, Cout_add, Cout_sub}),//Order is important
+    .S(S),
+    .Y(Y)
+  )
+  
  wire [15:0] nY;
  genvar k;
  generate
@@ -162,7 +211,7 @@ endgenerate//nY = ALL 1's
   or (zero_help[0], nY[0], 1'b0);   // seed: zero_help[0] = nY[0]
   generate
     for (z = 1; z < 16; z = z + 1) begin : Set_ZBit
-      and (zero_help[z], zero_help[z-1], Y[z]); // Ripple carry the result of the AND
+      and (zero_help[z], zero_help[z-1], nY[z]); // Ripple carry the result of the AND
     end
   endgenerate
   

@@ -155,6 +155,14 @@ module tb_reg;
     // Result after next posedge: busB = 16'h55AA (newly written value)
     #10;
 
+
+    // ----------------------------------------------------------------
+    // EDGE CASE: busW has value to write but WrEn is disabled 
+    // ----------------------------------------------------------------
+    // 
+    WrEn = 1'b0; busW = 16'hdead;
+    #10
+    WrEn = 1'b1;
     // Done
     #10;
     $finish;
