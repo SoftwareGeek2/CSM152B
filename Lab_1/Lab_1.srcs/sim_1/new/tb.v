@@ -12,7 +12,6 @@ module tb;
     wire [15:0] Y;
     wire zero;
     wire zero_Out;
-    wire overflow;
     
     
     
@@ -27,9 +26,9 @@ module tb;
         .clock(clock),
         .A(A),
         .B(B),
-        .Cin(Cin), // carry in
+        .Cin(Cin), // carry in 
         .Y(Y),
-        .Cout(Cout), // carry out
+        .Cout(Cout), // carry out -> OVERFLOW NOT CARRY IN
         .S(S),
         .zero_Out(zero_Out)
     );

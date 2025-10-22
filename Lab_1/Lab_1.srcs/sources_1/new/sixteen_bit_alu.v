@@ -6,14 +6,13 @@ module sixteen_bit_alu(
   input  [3:0]  S,
   output        Cout,
   output [15:0] Y,
-  output zero_Out,
-  output overflow
+  output zero_Out
 );
   //reg [255:0] final_result;
   wire [15:0] sub, add, bit_or, bit_and, dec, inc, invert, invert_b, asl, asr, lsl, lsr, slte, slte_helper;
   wire [15:0] filler_1, filler_2, filler_3;
-  wire Cout_add, Cout_sub, Cout_inc, Cout_dec, Cout_asl;
-  wire [15:0] Cout_add_ar, Cout_sub_ar, Cout_inc_ar, Cout_dec_ar, Cout_asl_ar, Cout_Final_arr;
+  wire Cout_add, Cout_sub, Cout_inc, Cout_dec, Cout_asl;//OVERFLOW NOT COUT
+  wire [15:0] Cout_add_ar, Cout_sub_ar, Cout_inc_ar, Cout_dec_ar, Cout_asl_ar, Cout_Final_arr;//OVERFLOW NOT COUT
 //  assign add     = A + B + Cin;
 //  assign sub     = A - B - Cin;
 //  assign bit_or  = A | B;
@@ -55,7 +54,7 @@ module sixteen_bit_alu(
         end
     endgenerate
     
-    xor(overflow, asl[15], A[15]);
+    xor(Cout_asl, asl[15], A[15]);
  
     // Logical shift right
     generate
@@ -73,6 +72,15 @@ module sixteen_bit_alu(
 
   // adder  
   adder_16bit find_sum (.r1(A), .r2(B), .ci(Cin), .carry(Cout_add), .result(add));
+  
+  //Overflow calc for addition
+  wire MSB_mid;
+  wire MSB_res_mid;
+  xor(MSB_mid, A[15], B[15]);
+  not(MSB_mid, MSB_mid);
+  xor(MSB_res_mid, A[15], add[15]);
+  and(Cout_add, MSB_mid, MSB_res_mid);
+  
 
   // invert (-A = ~A + 1)
   // First - invert (~A)
@@ -107,6 +115,7 @@ module sixteen_bit_alu(
     //not(notCin, Cin);
     wire carry_sub_raw; //Use this to carry notCin //Just Cin actually
     adder_16bit find_sub (.r1(A), .r2(invert_b), .ci(Cin), .carry(carry_sub_raw), .result(sub));
+    //SUB RESULT WAS FOUND HERE
 
 
   wire signed [15:0] As = A;
@@ -197,7 +206,7 @@ module sixteen_bit_alu(
   
   
   assign Cout_add_ar = {16{Cout_add}};
-  assign Cout_sub_ar = {16{carry_sub_raw}};
+  assign Cout_sub_ar = {16{V}};
   assign Cout_dec_ar = {16{Cout_dec}};
   assign Cout_inc_ar = {16{Cout_inc}};
   assign Cout_asl_ar = {16{Cout_asl}};
