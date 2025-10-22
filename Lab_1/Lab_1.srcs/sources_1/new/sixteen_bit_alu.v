@@ -76,11 +76,12 @@ module sixteen_bit_alu(
   
   //Overflow calc for addition
   wire MSB_mid;
+  wire MSB_mid_not;
   wire MSB_res_mid;
   xor(MSB_mid, A[15], B[15]);
-  not(MSB_mid, MSB_mid);
+  not(MSB_mid_not, MSB_mid);
   xor(MSB_res_mid, A[15], add[15]);
-  and(Cout_add_True, MSB_mid, MSB_res_mid);
+  and(Cout_add_True, MSB_mid_not, MSB_res_mid);
   
 
   // invert (-A = ~A + 1)
@@ -138,17 +139,29 @@ module sixteen_bit_alu(
   
   //DECREMENT
     adder_16bit decrement (.r1(A), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout_dec), .result(dec));
+    wire MSB_mid_dec;
+    wire MSB_res_dec;
+    xor(MSB_mid_dec, A[15], 1'b1);
+    xor(MSB_res_dec, A[15], dec[15]);
+    and(Cout_dec_True, MSB_mid_dec, MSB_res_dec);
     
   //INCREMENT
   adder_16bit increment (.r1(A), .r2(16'b1), .ci(1'b0), .carry(Cout_inc), .result(inc));
   
-    //Overflow calc for addition
+//  wire MSB_mid;
+//    wire MSB_res_mid;
+//    xor(MSB_mid, A[15], B[15]);
+//    not(MSB_mid, MSB_mid);
+//    xor(MSB_res_mid, A[15], add[15]);
+//    and(Cout_add_True, MSB_mid, MSB_res_mid);
+    //Overflow calc for inc
   wire MSB_mid_inc;
+  wire MSB_mid_inc_not;
   wire MSB_res_mid_inc;
-  xor(MSB_mid_inc, A[15], 1'b0);
-  not(MSB_mid_inc, MSB_mid_inc);
+  xor(MSB_mid_inc, A[15], 0);
+  not(MSB_mid_inc_not, MSB_mid_inc);
   xor(MSB_res_mid_inc, A[15], inc[15]);
-  and(Cout_inc_True, MSB_mid_inc, MSB_res_mid_inc);
+  and(Cout_inc_True,MSB_mid_inc_not, MSB_res_mid_inc);
   
   //SLTE
 //  adder_16bit slte_help (.r1(sub), .r2(16'b1111_1111_1111_1111), .ci(1'b0), .carry(Cout), .result(slte_helper));
@@ -216,7 +229,7 @@ module sixteen_bit_alu(
   
   assign Cout_add_ar = {16{Cout_add_True}};
   assign Cout_sub_ar = {16{V}};
-  assign Cout_dec_ar = {16{Cout_dec}};
+  assign Cout_dec_ar = {16{Cout_dec_True}};
   assign Cout_inc_ar = {16{Cout_inc_True}};
   assign Cout_asl_ar = {16{Cout_asl}};
   m161 mux_cout (
