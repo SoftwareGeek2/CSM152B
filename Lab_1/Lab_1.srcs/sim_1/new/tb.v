@@ -11,6 +11,8 @@ module tb;
     wire        Cout;
     wire [15:0] Y;
     wire zero;
+    wire zero_Out;
+    wire overflow;
     
     
     

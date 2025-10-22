@@ -13,6 +13,7 @@ module sixteen_bit_alu(
   wire [15:0] sub, add, bit_or, bit_and, dec, inc, invert, invert_b, asl, asr, lsl, lsr, slte, slte_helper;
   wire [15:0] filler_1, filler_2, filler_3;
   wire Cout_add, Cout_sub, Cout_inc, Cout_dec, Cout_asl;
+  wire [15:0] Cout_add_ar, Cout_sub_ar, Cout_inc_ar, Cout_dec_ar, Cout_asl_ar, Cout_Final_arr;
 //  assign add     = A + B + Cin;
 //  assign sub     = A - B - Cin;
 //  assign bit_or  = A | B;
@@ -53,6 +54,8 @@ module sixteen_bit_alu(
             assign asl[i] = (i >= B) ? A[i - B] : 1'b0;
         end
     endgenerate
+    
+    xor(overflow, asl[15], A[15]);
  
     // Logical shift right
     generate
@@ -192,12 +195,19 @@ module sixteen_bit_alu(
     .Y(Y)
   );
   
+  
+  assign Cout_add_ar = {16{Cout_add}};
+  assign Cout_sub_ar = {16{carry_sub_raw}};
+  assign Cout_dec_ar = {16{Cout_dec}};
+  assign Cout_inc_ar = {16{Cout_inc}};
+  assign Cout_asl_ar = {16{Cout_asl}};
   m161 mux_cout (
-    .D({16'b0, 16'b0, Cout_asl, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, Cout_inc, Cout_dec, 16'b0, 16'b0, Cout_add, Cout_sub}),//Order is important
+    .D({16'b0, 16'b0, Cout_asl_ar, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, Cout_inc_ar, Cout_dec_ar, 16'b0, 16'b0, Cout_add_ar, Cout_sub_ar}),//Order is important
     .S(S),
-    .Y(Cout)
+    .Y(Cout_Final_arr)
   );
   
+  or(Cout, Cout_Final_arr[15], 1'b0);// Cout = Cout_Final_arr[15]
  wire [15:0] nY;
  genvar k;
  generate
