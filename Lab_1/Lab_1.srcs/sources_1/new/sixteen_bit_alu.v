@@ -192,11 +192,11 @@ module sixteen_bit_alu(
     .Y(Y)
   );
   
-  m61 mux_cout (
-    .D({asr, filler_3, Cout_asl, filler_2, lsr, slte, lsl, filler_1, invert, Cout_inc, Cout_dec, bit_and, bit_or, Cout_add, Cout_sub}),//Order is important
+  m161 mux_cout (
+    .D({16'b0, 16'b0, Cout_asl, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, 16'b0, Cout_inc, Cout_dec, 16'b0, 16'b0, Cout_add, Cout_sub}),//Order is important
     .S(S),
-    .Y(Y)
-  )
+    .Y(Cout)
+  );
   
  wire [15:0] nY;
  genvar k;
