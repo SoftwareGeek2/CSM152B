@@ -3,16 +3,20 @@
 module tb_clock;
 
     reg clk;
-    wire one_hz_clk;
-    wire fast_hz_clk;
-    wire btn_hz_clk;
+    wire two_sec_clk;
+    wire three_sec_clk;
+    wire six_sec_clk;
+    wire twelve_sec_clk;
+    wire btn_clk;
     
     
     clock_manager uut (
         .clk(clk),
-        .one_hz_clk(one_hz_clk),
-        .fast_hz_clk(fast_hz_clk),
-        .btn_hz_clk(btn_hz_clk)
+        .two_sec_clk(two_sec_clk),
+        .three_sec_clk(three_sec_clk),
+        .six_sec_clk(six_sec_clk),
+        .twelve_sec_clk(twelve_sec_clk),
+        .btn_clk(btn_clk)
     );
     
     initial begin
