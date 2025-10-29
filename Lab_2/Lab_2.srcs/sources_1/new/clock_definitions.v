@@ -1,5 +1,5 @@
 `timescale 1ns / 1ps
-parameter fastHz = 200000;    // these numbers should be (100MHz/2)/(desired Hz) (250 hz = 200,000)
+parameter fastHz = 20000;    // these numbers should be (100MHz/2)/(desired Hz) (2500 hz = 20,000)
 parameter oneHz = 50000000;   // 50,000,000
 parameter btnHz = 6250000; // 32 hz 3125000
  

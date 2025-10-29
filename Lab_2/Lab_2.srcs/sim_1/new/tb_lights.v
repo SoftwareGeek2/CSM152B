@@ -2,7 +2,8 @@
 
 
 module tb_lights;
-    reg clk;
+    reg clk = 0;
+    wire fast_clk;
     reg rst;
     reg walk;
     reg traffic;
@@ -10,31 +11,9 @@ module tb_lights;
     wire [4:0] clk_counter;
     
     
-    streetlights uut(.rst(rst), .clk(clk), .walk(walk), .traffic(traffic), .next_state(next_state), .clk_counter(clk_counter));
-
-    
-//    wire fast_clk;
-//    wire one_sec_clk;
-//    wire two_sec_clk;
-//    wire three_sec_clk;
-//    wire six_sec_clk;
-//    wire twelve_sec_clk;
-//    wire btn_clk;
     
     
-    
-//    clock_manager yep_clock (
-//            .clk(clk),
-//            .fast_clk(fast_clk),
-//            .one_sec_clk(one_sec_clk),
-//            .two_sec_clk(two_sec_clk),
-//            .three_sec_clk(three_sec_clk),
-//            .six_sec_clk(six_sec_clk),
-//            .twelve_sec_clk(twelve_sec_clk),
-//            .btn_clk(btn_clk)
-//        );
-    
-    
+    streetlights uut(.rst(rst), .clk(clk), .fast_clk(fast_clk), .walk(walk), .traffic(traffic), .next_state(next_state), .clk_counter(clk_counter));
     
     
     always #5 clk = ~clk;
@@ -43,33 +22,28 @@ module tb_lights;
     
           
           //next_state = 3'b000;
+          rst = 0;
           traffic = 0;
           walk = 0;
-          #100000
-          
-           traffic = 0;
-           walk = 0;
-           #100000
+          #2_200_000 // first 6 cycle
+          traffic = 1;
+          #200_000
+           #400_000
+           rst = 1;
            
+           #2_400_000
+           rst = 0;
+           walk = 1;
            traffic = 0;
+           
+           #2_400_000 // state 001 end
+           
+           #800_000 // state 011 end
+           
+           #1_200_000 // state 100 end
+           
            walk = 0;
-           #100000
-             
-            traffic = 0;
-            walk = 0;
-            #100000
-            
-            traffic = 0;
-            walk = 0;
-            #100000
-
-            traffic = 0;
-            walk = 0;
-            #100000
-            
-            traffic = 0;
-            walk = 0;
-            #100000
+            #50000000
             $finish;                                    
     end
     

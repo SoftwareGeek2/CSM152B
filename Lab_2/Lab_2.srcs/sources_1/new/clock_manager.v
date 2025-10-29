@@ -109,7 +109,9 @@ always @(posedge clk) begin
   
    
 end
- 
+
+assign fast_clk = fast_clk_reg;
+assign one_sec_clk = one_sec_clk_reg;
 assign two_sec_clk = two_sec_clk_reg;
 assign three_sec_clk = three_sec_clk_reg;
 assign six_sec_clk = six_sec_clk_reg;
