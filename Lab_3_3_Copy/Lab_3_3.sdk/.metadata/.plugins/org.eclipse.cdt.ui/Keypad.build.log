@@ -1,0 +1,6 @@
+11:12:36 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+
+11:12:37 Build Finished (took 168ms)
+

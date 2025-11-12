@@ -1,0 +1,1725 @@
+11:06:49 **** Build of project Keypad_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodKYPD_v1_0/src"
+make -C microblaze_0/libsrc/PmodKYPD_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/PmodKYPD_v1_0/src"
+make -C microblaze_0/libsrc/PmodKYPD_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodKYPD..."
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:74:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+11:06:56 **** Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   2712	    268	   3108	   6088	   17c8	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:06:59 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:09:59 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   7424	    272	   3128	  10824	   2a48	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:10:46 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:11:15 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:22:05 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:88:13: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+             ^~
+../src/helloworld.c:88:13: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:88:28: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+                            ^~
+../src/helloworld.c:88:28: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:88:43: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+                                           ^~
+../src/helloworld.c:88:43: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:79:8: warning: unused variable 'keyboard_input' [-Wunused-variable]
+    int keyboard_input = 0;
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25312	   1312	   3192	  29816	   7478	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:22:34 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:88:13: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+             ^~
+../src/helloworld.c:88:13: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:88:28: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+                            ^~
+../src/helloworld.c:88:28: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:88:43: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+                                           ^~
+../src/helloworld.c:88:43: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:79:8: warning: unused variable 'keyboard_input' [-Wunused-variable]
+    int keyboard_input = 0;
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25344	   1312	   3192	  29848	   7498	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:22:55 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:79:8: warning: unused variable 'keyboard_input' [-Wunused-variable]
+    int keyboard_input = 0;
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25296	   1312	   3192	  29800	   7468	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:23:46 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:79:8: warning: unused variable 'keyboard_input' [-Wunused-variable]
+    int keyboard_input = 0;
+        ^~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25296	   1312	   3192	  29800	   7468	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:27:01 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25468	   1312	   3196	  29976	   7518	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:27:07 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:27:44 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:28:58 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:98:13: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+             ^~
+../src/helloworld.c:98:13: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:98:28: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+                            ^~
+../src/helloworld.c:98:28: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:98:43: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+                                           ^~
+../src/helloworld.c:98:43: warning: comparison with string literal results in unspecified behavior [-Waddress]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25516	   1312	   3196	  30024	   7548	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:29:01 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:29:40 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:98:13: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+             ^~
+../src/helloworld.c:98:13: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:98:28: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+                            ^~
+../src/helloworld.c:98:28: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:98:43: warning: comparison between pointer and integer
+     if(inp1 != "1" && inp1 != "2" && inp1 != "3")
+                                           ^~
+../src/helloworld.c:98:43: warning: comparison with string literal results in unspecified behavior [-Waddress]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25548	   1312	   3196	  30056	   7568	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:29:54 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:30:41 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:98:23: warning: comparison between pointer and integer
+     if(keyboard_input != "1" && keyboard_input != "2" && keyboard_input != "3")
+                       ^~
+../src/helloworld.c:98:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:98:48: warning: comparison between pointer and integer
+     if(keyboard_input != "1" && keyboard_input != "2" && keyboard_input != "3")
+                                                ^~
+../src/helloworld.c:98:48: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:98:73: warning: comparison between pointer and integer
+     if(keyboard_input != "1" && keyboard_input != "2" && keyboard_input != "3")
+                                                                         ^~
+../src/helloworld.c:98:73: warning: comparison with string literal results in unspecified behavior [-Waddress]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25516	   1312	   3196	  30024	   7548	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:31:07 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:99:23: warning: comparison between pointer and integer
+     if(keyboard_input != "1" && keyboard_input != "2" && keyboard_input != "3")
+                       ^~
+../src/helloworld.c:99:23: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:99:48: warning: comparison between pointer and integer
+     if(keyboard_input != "1" && keyboard_input != "2" && keyboard_input != "3")
+                                                ^~
+../src/helloworld.c:99:48: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/helloworld.c:99:73: warning: comparison between pointer and integer
+     if(keyboard_input != "1" && keyboard_input != "2" && keyboard_input != "3")
+                                                                         ^~
+../src/helloworld.c:99:73: warning: comparison with string literal results in unspecified behavior [-Waddress]
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25496	   1312	   3192	  30000	   7530	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:31:22 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25460	   1312	   3196	  29968	   7510	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:31:35 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:33:03 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:33:31 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25460	   1312	   3196	  29968	   7510	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:34:10 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25460	   1312	   3196	  29968	   7510	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:34:46 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25460	   1312	   3196	  29968	   7510	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:34:51 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:35:26 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25460	   1312	   3196	  29968	   7510	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:35:34 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25460	   1312	   3196	  29968	   7510	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:35:59 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:36:19 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:37:42 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25512	   1312	   3192	  30016	   7540	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:37:47 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25512	   1312	   3192	  30016	   7540	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:38:09 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:38:58 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25456	   1312	   3192	  29960	   7508	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:39:03 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:39:22 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25460	   1312	   3196	  29968	   7510	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:39:24 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:40:43 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25508	   1312	   3196	  30016	   7540	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:40:53 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:42:10 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25484	   1312	   3196	  29992	   7528	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:43:15 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25488	   1312	   3192	  29992	   7528	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+11:43:17 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:45:05 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25488	   1312	   3192	  29992	   7528	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:15:10 **** Build of project Keypad_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/PmodKYPD_v1_0/src"
+make -C microblaze_0/libsrc/PmodKYPD_v1_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/PmodKYPD_v1_0/src"
+make -C microblaze_0/libsrc/PmodKYPD_v1_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling PmodKYPD..."
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:74:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+10:15:25 **** Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+'Finished building: ../src/helloworld.c'
+' '
+'Building file: ../src/platform.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+'Finished building: ../src/platform.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25488	   1312	   3192	  29992	   7528	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:21:30 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:4: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    keyboardInp();
+    ^~~~~~~~~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:74:6: error: 'inp1' undeclared (first use in this function); did you mean 'int'?
+      inp1 = getchar();
+      ^~~~
+      int
+../src/helloworld.c:74:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:97:1: error: expected ';' before '}' token
+ }
+ ^
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:116:9: warning: unused variable 'inp1' [-Wunused-variable]
+    char inp1 = '\0';
+         ^~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:204:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/helloworld.c:195:6: warning: 'DisableCaches' defined but not used [-Wunused-function]
+ void DisableCaches() {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:184:6: warning: 'EnableCaches' defined but not used [-Wunused-function]
+ void EnableCaches() {
+      ^~~~~~~~~~~~
+../src/helloworld.c:180:6: warning: 'DemoCleanup' defined but not used [-Wunused-function]
+ void DemoCleanup() {
+      ^~~~~~~~~~~
+../src/helloworld.c:112:5: warning: 'DemoRun' defined but not used [-Wunused-function]
+ int DemoRun() {
+     ^~~~~~~
+../src/helloworld.c:106:6: warning: 'DemoInitialize' defined but not used [-Wunused-function]
+ void DemoInitialize() {
+      ^~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+10:21:49 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:4: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    keyboardInp();
+    ^~~~~~~~~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:74:6: error: 'inp1' undeclared (first use in this function); did you mean 'int'?
+      inp1 = getchar();
+      ^~~~
+      int
+../src/helloworld.c:74:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:97:1: error: expected ';' before '}' token
+ }
+ ^
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:116:9: warning: unused variable 'inp1' [-Wunused-variable]
+    char inp1 = '\0';
+         ^~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:204:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/helloworld.c:195:6: warning: 'DisableCaches' defined but not used [-Wunused-function]
+ void DisableCaches() {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:184:6: warning: 'EnableCaches' defined but not used [-Wunused-function]
+ void EnableCaches() {
+      ^~~~~~~~~~~~
+../src/helloworld.c:180:6: warning: 'DemoCleanup' defined but not used [-Wunused-function]
+ void DemoCleanup() {
+      ^~~~~~~~~~~
+../src/helloworld.c:112:5: warning: 'DemoRun' defined but not used [-Wunused-function]
+ int DemoRun() {
+     ^~~~~~~
+../src/helloworld.c:106:6: warning: 'DemoInitialize' defined but not used [-Wunused-function]
+ void DemoInitialize() {
+      ^~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+10:22:44 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:21: error: void value not ignored as it ought to be
+    int keypad_val = DemoRun(); // listen for keypad input
+                     ^~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:74:6: error: 'inp1' undeclared (first use in this function); did you mean 'int'?
+      inp1 = getchar();
+      ^~~~
+      int
+../src/helloworld.c:74:6: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:97:1: error: expected ';' before '}' token
+ }
+ ^
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:116:9: warning: unused variable 'inp1' [-Wunused-variable]
+    char inp1 = '\0';
+         ^~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:204:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/helloworld.c:195:6: warning: 'DisableCaches' defined but not used [-Wunused-function]
+ void DisableCaches() {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:184:6: warning: 'EnableCaches' defined but not used [-Wunused-function]
+ void EnableCaches() {
+      ^~~~~~~~~~~~
+../src/helloworld.c:180:6: warning: 'DemoCleanup' defined but not used [-Wunused-function]
+ void DemoCleanup() {
+      ^~~~~~~~~~~
+../src/helloworld.c:112:5: warning: 'DemoRun' defined but not used [-Wunused-function]
+ int DemoRun() {
+     ^~~~~~~
+../src/helloworld.c:106:6: warning: 'DemoInitialize' defined but not used [-Wunused-function]
+ void DemoInitialize() {
+      ^~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+10:23:28 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:21: error: void value not ignored as it ought to be
+    int keypad_val = DemoRun(); // listen for keypad input
+                     ^~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:97:1: error: expected ';' before '}' token
+ }
+ ^
+../src/helloworld.c:204:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/helloworld.c:195:6: warning: 'DisableCaches' defined but not used [-Wunused-function]
+ void DisableCaches() {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:184:6: warning: 'EnableCaches' defined but not used [-Wunused-function]
+ void EnableCaches() {
+      ^~~~~~~~~~~~
+../src/helloworld.c:180:6: warning: 'DemoCleanup' defined but not used [-Wunused-function]
+ void DemoCleanup() {
+      ^~~~~~~~~~~
+../src/helloworld.c:112:5: warning: 'DemoRun' defined but not used [-Wunused-function]
+ int DemoRun() {
+     ^~~~~~~
+../src/helloworld.c:106:6: warning: 'DemoInitialize' defined but not used [-Wunused-function]
+ void DemoInitialize() {
+      ^~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+10:25:37 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:21: error: void value not ignored as it ought to be
+    int keypad_val = DemoRun(); // listen for keypad input
+                     ^~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:173:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/helloworld.c:164:6: warning: 'DisableCaches' defined but not used [-Wunused-function]
+ void DisableCaches() {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:153:6: warning: 'EnableCaches' defined but not used [-Wunused-function]
+ void EnableCaches() {
+      ^~~~~~~~~~~~
+../src/helloworld.c:149:6: warning: 'DemoCleanup' defined but not used [-Wunused-function]
+ void DemoCleanup() {
+      ^~~~~~~~~~~
+../src/helloworld.c:112:5: warning: 'DemoRun' defined but not used [-Wunused-function]
+ int DemoRun() {
+     ^~~~~~~
+../src/helloworld.c:106:6: warning: 'DemoInitialize' defined but not used [-Wunused-function]
+ void DemoInitialize() {
+      ^~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+10:26:20 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:21: error: void value not ignored as it ought to be
+    int keypad_val = DemoRun(); // listen for keypad input
+                     ^~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:173:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/helloworld.c:164:6: warning: 'DisableCaches' defined but not used [-Wunused-function]
+ void DisableCaches() {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:153:6: warning: 'EnableCaches' defined but not used [-Wunused-function]
+ void EnableCaches() {
+      ^~~~~~~~~~~~
+../src/helloworld.c:149:6: warning: 'DemoCleanup' defined but not used [-Wunused-function]
+ void DemoCleanup() {
+      ^~~~~~~~~~~
+../src/helloworld.c:112:5: warning: 'DemoRun' defined but not used [-Wunused-function]
+ int DemoRun() {
+     ^~~~~~~
+../src/helloworld.c:106:6: warning: 'DemoInitialize' defined but not used [-Wunused-function]
+ void DemoInitialize() {
+      ^~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+10:27:56 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'keyboardInp':
+../src/helloworld.c:173:1: error: expected declaration or statement at end of input
+ }
+ ^
+At top level:
+../src/helloworld.c:164:6: warning: 'DisableCaches' defined but not used [-Wunused-function]
+ void DisableCaches() {
+      ^~~~~~~~~~~~~
+../src/helloworld.c:153:6: warning: 'EnableCaches' defined but not used [-Wunused-function]
+ void EnableCaches() {
+      ^~~~~~~~~~~~
+../src/helloworld.c:149:6: warning: 'DemoCleanup' defined but not used [-Wunused-function]
+ void DemoCleanup() {
+      ^~~~~~~~~~~
+../src/helloworld.c:112:5: warning: 'DemoRun' defined but not used [-Wunused-function]
+ int DemoRun() {
+     ^~~~~~~
+../src/helloworld.c:106:6: warning: 'DemoInitialize' defined but not used [-Wunused-function]
+ void DemoInitialize() {
+      ^~~~~~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+10:29:45 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25576	   1312	   3192	  30080	   7580	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:30:03 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25552	   1312	   3192	  30056	   7568	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:30:34 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25576	   1312	   3192	  30080	   7580	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:30:51 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:31:39 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:35:04 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25616	   1312	   3192	  30120	   75a8	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:35:13 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:36:01 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25620	   1312	   3196	  30128	   75b0	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:36:07 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:36:41 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25620	   1312	   3196	  30128	   75b0	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:37:13 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25624	   1312	   3192	  30128	   75b0	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:37:17 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:37:26 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25624	   1312	   3192	  30128	   75b0	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:37:30 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:38:35 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:143:13: error: 'keyboard_input' undeclared (first use in this function); did you mean 'keyboardInp'?
+          if(keyboard_input != 1 && keyboard_input != 2 && keyboard_input != 3) {
+             ^~~~~~~~~~~~~~
+             keyboardInp
+../src/helloworld.c:143:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:147:7: error: 'inp1' undeclared (first use in this function); did you mean 'int'?
+       inp1 = 0;
+       ^~~~
+       int
+make: *** [src/helloworld.o] Error 1
+10:39:52 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:144:10: error: expected ';' before 'if'
+          if(last_key != 1 && last_key != 2 && last_key != 3) {
+          ^~
+../src/helloworld.c:128:4: warning: label 'start_k' defined but not used [-Wunused-label]
+    start_k:
+    ^~~~~~~
+make: *** [src/helloworld.o] Error 1
+10:40:00 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:151:46: error: 'keyboard_input' undeclared (first use in this function); did you mean 'keyboardInp'?
+       xil_printf("Successful Input: %d\n\r", keyboard_input);
+                                              ^~~~~~~~~~~~~~
+                                              keyboardInp
+../src/helloworld.c:151:46: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+10:40:10 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+../src/helloworld.c: In function 'DemoRun':
+../src/helloworld.c:152:14: error: 'keyboard_input' undeclared (first use in this function); did you mean 'keyboardInp'?
+       return keyboard_input;
+              ^~~~~~~~~~~~~~
+              keyboardInp
+../src/helloworld.c:152:14: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [src/helloworld.o] Error 1
+10:40:17 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25712	   1312	   3192	  30216	   7608	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:40:35 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25712	   1312	   3192	  30216	   7608	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:41:26 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25716	   1312	   3196	  30224	   7610	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:41:41 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:42:16 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:43:18 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25728	   1312	   3192	  30232	   7618	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:43:32 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:44:09 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+../src/helloworld.c:58:8: warning: unused variable 'keypad_val' [-Wunused-variable]
+    int keypad_val = DemoRun(); // listen for keypad input
+        ^~~~~~~~~~
+../src/helloworld.c:53:8: warning: unused variable 'keyboard_val' [-Wunused-variable]
+    int keyboard_val = keyboardInp();
+        ^~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  25732	   1312	   3196	  30240	   7620	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:44:12 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:44:35 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:49:48 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26288	   1312	   3192	  30792	   7848	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:50:07 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26288	   1312	   3192	  30792	   7848	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:50:23 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26288	   1312	   3192	  30792	   7848	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:50:50 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26316	   1312	   3196	  30824	   7868	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:51:56 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26360	   1312	   3192	  30864	   7890	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:52:58 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26368	   1312	   3192	  30872	   7898	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:53:13 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:54:00 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26328	   1312	   3192	  30832	   7870	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:54:41 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26320	   1312	   3192	  30824	   7868	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:54:59 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:55:36 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:55:54 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:56:26 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26240	   1312	   3192	  30744	   7818	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:56:30 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+10:56:56 **** Auto Build of configuration Debug for project Keypad ****
+make all 
+'Building file: ../src/helloworld.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -I../../Keypad_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:53:23: warning: implicit declaration of function 'keyboardInp' [-Wimplicit-function-declaration]
+    int keyboard_val = keyboardInp();
+                       ^~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: Keypad.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../Keypad_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "Keypad.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Keypad.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size Keypad.elf  |tee "Keypad.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26248	   1312	   3192	  30752	   7820	Keypad.elf
+'Finished building: Keypad.elf.size'
+' '
+10:57:03 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:02:18 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:11:56 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.
+11:12:36 **** Incremental Build of configuration Debug for project Keypad ****
+make all 
+make: Nothing to be done for `all'.

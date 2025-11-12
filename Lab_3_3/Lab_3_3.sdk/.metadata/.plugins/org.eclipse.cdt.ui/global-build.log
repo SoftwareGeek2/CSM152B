@@ -1,0 +1,2946 @@
+11:09:58 **** Build of project ipi-gsg_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:74:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+
+**** Build of configuration Debug for project ipi-gsg ****
+
+Nothing to build for project ipi-gsg
+11:10:27 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+11:10:29 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/lib/le/crtinit.o: In function `_crtinit':
+(.text+0x78): undefined reference to `main'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+11:11:50 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    292	   3120	  10088	   2768	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:13:23 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:23:04 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:32:04 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6672	    292	   3116	  10080	   2760	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:32:10 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:32:36 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    292	   3120	  10088	   2768	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:32:52 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    292	   3120	  10088	   2768	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:33:03 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:33:25 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    292	   3120	  10088	   2768	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:33:32 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:39:40 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6676	    292	   3120	  10088	   2768	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:39:45 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:40:34 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6680	    292	   3116	  10088	   2768	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:40:37 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6680	    292	   3116	  10088	   2768	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:40:41 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:41:07 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:10: error: invalid suffix "_FFFF" on integer constant
+    led = 0x1FFF_FFFF;
+          ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+11:41:11 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+   6680	    292	   3116	  10088	   2768	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+10:16:00 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:19:23 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:20:18 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:21:49 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:23:43 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:40:27 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:43:31 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   scanf("%d", &gpio);
+   ^~~~~
+../src/main.c:23:3: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/main.c:23:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+../src/main.c:23:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'XGpio * {aka struct <anonymous> *}' [-Wformat=]
+   scanf("%d", &gpio);
+          ~^   ~~~~~
+../src/main.c:24:3: warning: implicit declaration of function 'getchar'; did you mean 'memchr'? [-Wimplicit-function-declaration]
+   getchar();
+   ^~~~~~~
+   memchr
+../src/main.c:13:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:13:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 96640 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:44:34 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   scanf("%d", &gpio);
+   ^~~~~
+../src/main.c:23:3: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/main.c:23:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+../src/main.c:23:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'XGpio * {aka struct <anonymous> *}' [-Wformat=]
+   scanf("%d", &gpio);
+          ~^   ~~~~~
+../src/main.c:24:3: warning: implicit declaration of function 'getchar'; did you mean 'memchr'? [-Wimplicit-function-declaration]
+   getchar();
+   ^~~~~~~
+   memchr
+../src/main.c:13:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:13:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 96344 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:45:22 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   scanf("%d", &num);
+   ^~~~~
+../src/main.c:24:3: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/main.c:24:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+../src/main.c:24:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int **' [-Wformat=]
+   scanf("%d", &num);
+          ~^   ~~~~
+../src/main.c:25:3: warning: implicit declaration of function 'getchar'; did you mean 'memchr'? [-Wimplicit-function-declaration]
+   getchar();
+   ^~~~~~~
+   memchr
+../src/main.c:13:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:13:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 96344 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:46:13 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   scanf("%d", &num);
+   ^~~~~
+../src/main.c:24:3: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/main.c:24:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+../src/main.c:24:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int **' [-Wformat=]
+   scanf("%d", &num);
+          ~^   ~~~~
+../src/main.c:25:14: warning: implicit declaration of function 'getchar'; did you mean 'memchr'? [-Wimplicit-function-declaration]
+   char res = getchar();
+              ^~~~~~~
+              memchr
+../src/main.c:25:8: warning: unused variable 'res' [-Wunused-variable]
+   char res = getchar();
+        ^~~
+../src/main.c:13:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:13:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 96344 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:46:22 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   scanf("%d", &num);
+   ^~~~~
+../src/main.c:24:3: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/main.c:24:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+../src/main.c:24:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int **' [-Wformat=]
+   scanf("%d", &num);
+          ~^   ~~~~
+../src/main.c:25:14: warning: implicit declaration of function 'getchar'; did you mean 'memchr'? [-Wimplicit-function-declaration]
+   char res = getchar();
+              ^~~~~~~
+              memchr
+../src/main.c:13:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:13:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 96344 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:46:45 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   scanf("%d", num);
+   ^~~~~
+../src/main.c:24:3: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/main.c:24:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+../src/main.c:25:14: warning: implicit declaration of function 'getchar'; did you mean 'memchr'? [-Wimplicit-function-declaration]
+   char res = getchar();
+              ^~~~~~~
+              memchr
+../src/main.c:13:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:13:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+../src/main.c:24:3: warning: 'num' is used uninitialized in this function [-Wuninitialized]
+   scanf("%d", num);
+   ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 96336 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:46:56 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   scanf("%d", num);
+   ^~~~~
+../src/main.c:24:3: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/main.c:24:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+../src/main.c:24:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat=]
+   scanf("%d", num);
+          ~^
+../src/main.c:25:14: warning: implicit declaration of function 'getchar'; did you mean 'memchr'? [-Wimplicit-function-declaration]
+   char res = getchar();
+              ^~~~~~~
+              memchr
+../src/main.c:13:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:13:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+../src/main.c:24:3: warning: 'num' is used uninitialized in this function [-Wuninitialized]
+   scanf("%d", num);
+   ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 96336 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:47:16 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:3: warning: implicit declaration of function 'scanf' [-Wimplicit-function-declaration]
+   scanf("%d", &num);
+   ^~~~~
+../src/main.c:24:3: warning: incompatible implicit declaration of built-in function 'scanf'
+../src/main.c:24:3: note: include '<stdio.h>' or provide a declaration of 'scanf'
+../src/main.c:25:14: warning: implicit declaration of function 'getchar'; did you mean 'memchr'? [-Wimplicit-function-declaration]
+   char res = getchar();
+              ^~~~~~~
+              memchr
+../src/main.c:13:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:13:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 96344 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:47:33 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 95712 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:47:52 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat=]
+   scanf("%d", num);
+          ~^
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+../src/main.c:25:3: warning: 'num' is used uninitialized in this function [-Wuninitialized]
+   scanf("%d", num);
+   ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 95712 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:48:13 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat=]
+   scanf("%d", num);
+          ~^
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+../src/main.c:25:3: warning: 'num' is used uninitialized in this function [-Wuninitialized]
+   scanf("%d", num);
+   ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 95712 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:48:23 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 95712 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:50:00 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat=]
+   scanf("%d", num);
+          ~^
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+../src/main.c:25:3: warning: 'num' is used uninitialized in this function [-Wuninitialized]
+   scanf("%d", num);
+   ^~~~~~~~~~~~~~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 95712 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:50:12 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:11: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'int' [-Wformat=]
+   scanf("%d", num);
+          ~^
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: ipi-gsg.elf section `.text' will not fit in region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem'
+c:/xilinx/sdk/2018.2/gnu/microblaze/nt/bin/../lib/gcc/microblaze-xilinx-elf/7.2.0/../../../../microblaze-xilinx-elf/bin/ld.exe: region `microblaze_0_local_memory_ilmb_bram_if_cntlr_Mem_microblaze_0_local_memory_dlmb_bram_if_cntlr_Mem' overflowed by 95720 bytes
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:52:40 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23532	   1332	   3184	  28048	   6d90	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+10:54:06 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:3: warning: implicit declaration of function 'xil_scanf'; did you mean 'viscanf'? [-Wimplicit-function-declaration]
+   xil_scanf("%d", num);
+   ^~~~~~~~~
+   viscanf
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Users\Student\Desktop\152BFall25\CSM152B\Lab_3_3\Lab_3_3.sdk\ipi-gsg\Debug/../src/main.c:25: undefined reference to `xil_scanf'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:54:22 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:7:10: fatal error: xil_scanf.h: No such file or directory
+ #include "xil_scanf.h"
+          ^~~~~~~~~~~~~
+compilation terminated.
+make: *** [src/main.o] Error 1
+10:54:34 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:25:3: warning: implicit declaration of function 'xil_scanf'; did you mean 'viscanf'? [-Wimplicit-function-declaration]
+   xil_scanf("%d", num);
+   ^~~~~~~~~
+   viscanf
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+./src/main.o: In function `main':
+C:\Users\Student\Desktop\152BFall25\CSM152B\Lab_3_3\Lab_3_3.sdk\ipi-gsg\Debug/../src/main.c:25: undefined reference to `xil_scanf'
+collect2.exe: error: ld returned 1 exit status
+make: *** [ipi-gsg.elf] Error 1
+10:55:43 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23532	   1332	   3184	  28048	   6d90	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+10:55:50 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:56:46 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23532	   1332	   3184	  28048	   6d90	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+10:56:49 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:57:29 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23528	   1332	   3180	  28040	   6d88	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+10:57:32 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:57:56 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23532	   1332	   3184	  28048	   6d90	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+10:58:04 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23532	   1332	   3184	  28048	   6d90	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+10:58:08 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:00:11 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:41:42: error: 'res' undeclared (first use in this function)
+  xil_printf("\r\n button state: %d\r\n", res);
+                                          ^~~
+../src/main.c:41:42: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+make: *** [src/main.o] Error 1
+11:00:29 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23516	   1332	   3184	  28032	   6d80	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:00:34 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:00:51 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23512	   1332	   3180	  28024	   6d78	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:00:55 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:01:38 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:03:33 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:28:11: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+           ^~
+../src/main.c:28:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:28:26: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+                          ^~
+../src/main.c:28:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23604	   1332	   3184	  28120	   6dd8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:03:40 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:03:52 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:28:11: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+           ^~
+../src/main.c:28:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:28:26: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+                          ^~
+../src/main.c:28:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23616	   1332	   3180	  28128	   6de0	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:03:53 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:04:21 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23568	   1332	   3180	  28080	   6db0	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:04:24 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:06:26 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23572	   1332	   3184	  28088	   6db8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:06:36 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:06:48 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23572	   1332	   3184	  28088	   6db8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:06:50 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:07:25 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23608	   1332	   3180	  28120	   6dd8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:07:39 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:08:06 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:10:33 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:31:11: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+           ^~
+../src/main.c:31:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:31:26: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+                          ^~
+../src/main.c:31:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:17:6: warning: unused variable 'value' [-Wunused-variable]
+  int value;
+      ^~~~~
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23656	   1332	   3180	  28168	   6e08	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:10:36 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:31:11: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+           ^~
+../src/main.c:31:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:31:26: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+                          ^~
+../src/main.c:31:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:17:6: warning: unused variable 'value' [-Wunused-variable]
+  int value = 0;
+      ^~~~~
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23660	   1332	   3184	  28176	   6e10	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:11:50 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:11: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+           ^~
+../src/main.c:29:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:29:26: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+                          ^~
+../src/main.c:29:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:17:6: warning: unused variable 'value' [-Wunused-variable]
+  int value = 0;
+      ^~~~~
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23624	   1332	   3180	  28136	   6de8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:11:53 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:13:07 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:11: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+           ^~
+../src/main.c:29:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:29:26: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+                          ^~
+../src/main.c:29:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:39:35: error: expected ')' before ';' token
+  xil_printf("You typed: %d", value;
+                                   ^
+../src/main.c:41:1: error: expected ';' before '}' token
+ }
+ ^
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+make: *** [src/main.o] Error 1
+11:13:15 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:11: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+           ^~
+../src/main.c:29:11: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:29:26: warning: comparison between pointer and integer
+   if (res == "\r" || res == "\n") break;
+                          ^~
+../src/main.c:29:26: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23676	   1332	   3184	  28192	   6e20	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:13:19 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:16:55 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:12: warning: comparison between pointer and integer
+    if (res == "\r" || res == "\n") break;
+            ^~
+../src/main.c:30:12: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:30:27: warning: comparison between pointer and integer
+    if (res == "\r" || res == "\n") break;
+                           ^~
+../src/main.c:30:27: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23652	   1332	   3184	  28168	   6e08	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:17:28 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:30:12: warning: comparison between pointer and integer
+    if (res == "\r" || res == "\n") break;
+            ^~
+../src/main.c:30:12: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:30:27: warning: comparison between pointer and integer
+    if (res == "\r" || res == "\n") break;
+                           ^~
+../src/main.c:30:27: warning: comparison with string literal results in unspecified behavior [-Waddress]
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23676	   1332	   3184	  28192	   6e20	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:17:35 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:17:55 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:18:36 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23644	   1332	   3184	  28160	   6e00	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:18:45 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:19:47 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:24:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23648	   1332	   3180	  28160	   6e00	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:21:38 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:27:6: warning: variable 'final_res' set but not used [-Wunused-but-set-variable]
+  int final_res;
+      ^~~~~~~~~
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: unused variable 'led' [-Wunused-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23728	   1332	   3180	  28240	   6e50	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:22:46 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23756	   1332	   3184	  28272	   6e70	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:24:06 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23764	   1332	   3184	  28280	   6e78	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:24:16 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:25:27 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23828	   1332	   3184	  28344	   6eb8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:25:32 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:26:03 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23832	   1332	   3180	  28344	   6eb8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:26:12 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:26:54 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:27:24 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23836	   1332	   3184	  28352	   6ec0	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:27:31 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:28:39 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23840	   1332	   3180	  28352	   6ec0	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:28:44 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:29:10 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:15:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  23840	   1332	   3180	  28352	   6ec0	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:29:12 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:32:26 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:54:4: error: 'res' undeclared (first use in this function); did you mean 'res2'?
+    res = getchar();
+    ^~~
+    res2
+../src/main.c:54:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+make: *** [src/main.o] Error 1
+11:32:32 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24044	   1332	   3184	  28560	   6f90	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:32:42 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24044	   1332	   3184	  28560	   6f90	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:32:47 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24072	   1332	   3180	  28584	   6fa8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:32:55 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:33:22 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24092	   1332	   3184	  28608	   6fc0	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:33:24 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:33:47 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:34:06 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24088	   1332	   3180	  28600	   6fb8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:34:16 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:34:32 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24060	   1332	   3184	  28576	   6fa0	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:34:34 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:35:14 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24088	   1332	   3180	  28600	   6fb8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:35:27 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24120	   1332	   3180	  28632	   6fd8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:35:31 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:35:57 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24388	   1332	   3184	  28904	   70e8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:36:00 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:36:24 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24416	   1332	   3180	  28928	   7100	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:36:31 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:36:56 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:37:16 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:38:25 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24392	   1332	   3180	  28904	   70e8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:38:29 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:38:43 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:39:26 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:39:33 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:39:40 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:39:46 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:40:01 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:14: error: empty character constant
+  char res1 = '';
+              ^~
+../src/main.c:24:14: error: empty character constant
+  char res2 = '';
+              ^~
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+make: *** [src/main.o] Error 1
+11:40:08 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:23:14: error: empty character constant
+  char res1 = '';
+              ^~
+../src/main.c:24:14: error: empty character constant
+  char res2 = '';
+              ^~
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+make: *** [src/main.o] Error 1
+11:40:24 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24404	   1332	   3184	  28920	   70f8	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:40:28 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:40:56 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24428	   1332	   3184	  28944	   7110	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:41:01 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:41:19 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24428	   1332	   3184	  28944	   7110	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:41:28 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24432	   1332	   3180	  28944	   7110	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:41:38 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24432	   1332	   3180	  28944	   7110	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:41:42 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:42:14 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24476	   1332	   3184	  28992	   7140	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:42:35 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:11: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 btn, led;
+           ^~~
+../src/main.c:14:6: warning: unused variable 'btn' [-Wunused-variable]
+  u32 btn, led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24476	   1332	   3184	  28992	   7140	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:43:14 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:6: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24448	   1332	   3180	  28960	   7120	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:43:38 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:6: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24460	   1332	   3184	  28976	   7130	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:43:41 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:44:05 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+../src/main.c:14:6: warning: variable 'led' set but not used [-Wunused-but-set-variable]
+  u32 led;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24456	   1332	   3180	  28968	   7128	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:44:09 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:46:04 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24720	   1332	   3180	  29232	   7230	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:46:09 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:47:04 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24720	   1332	   3180	  29232	   7230	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:47:16 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:47:30 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24720	   1332	   3180	  29232	   7230	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:47:48 **** Auto Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24720	   1332	   3180	  29232	   7230	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+10:28:41 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:28:52 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+10:29:31 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24668	   1332	   3184	  29184	   7200	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:01:03 **** Build of project ipi-gsg_bsp ****
+make -k all 
+"Running Make include in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make include in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Running Make libs in microblaze_0/libsrc/bram_v4_2/src"
+make -C microblaze_0/libsrc/bram_v4_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling bram"
+"Running Make libs in microblaze_0/libsrc/cpu_v2_7/src"
+make -C microblaze_0/libsrc/cpu_v2_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling cpu"
+"Running Make libs in microblaze_0/libsrc/gpio_v4_3/src"
+make -C microblaze_0/libsrc/gpio_v4_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling gpio"
+"Running Make libs in microblaze_0/libsrc/standalone_v6_7/src"
+make -C microblaze_0/libsrc/standalone_v6_7/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling standalone";
+microblaze_sleep.c:74:9: note: #pragma message: For the sleep routines, assembly instructions are used
+ #pragma message ("For the sleep routines, assembly instructions are used")
+         ^~~~~~~
+"Running Make libs in microblaze_0/libsrc/uartlite_v3_2/src"
+make -C microblaze_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS=  -O2 -c -mcpu=v10.0 -mlittle-endian -mxl-soft-mul" "EXTRA_COMPILER_FLAGS=-ffunction-sections -fdata-sections -Wall -Wextra"
+"Compiling uartlite"
+'Finished building libraries'
+11:01:11 **** Build of configuration Debug for project ipi-gsg ****
+make all 
+'Building file: ../src/main.c'
+'Invoking: MicroBlaze gcc compiler'
+mb-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -I../../ipi-gsg_bsp/microblaze_0/include -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -ffunction-sections -fdata-sections -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:29:6: warning: unused variable 'num_2' [-Wunused-variable]
+  int num_2 = 0;
+      ^~~~~
+../src/main.c:28:6: warning: unused variable 'num_1' [-Wunused-variable]
+  int num_1 = 0;
+      ^~~~~
+../src/main.c:27:6: warning: unused variable 'na' [-Wunused-variable]
+  int na = 0;
+      ^~
+../src/main.c:22:6: warning: unused variable 'num' [-Wunused-variable]
+  int num = 0;
+      ^~~
+'Finished building: ../src/main.c'
+' '
+'Building target: ipi-gsg.elf'
+'Invoking: MicroBlaze gcc linker'
+mb-gcc -Wl,-T -Wl,../src/lscript.ld -L../../ipi-gsg_bsp/microblaze_0/lib -mlittle-endian -mcpu=v10.0 -mxl-soft-mul -Wl,--no-relax -Wl,--gc-sections -o "ipi-gsg.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: ipi-gsg.elf'
+' '
+'Invoking: MicroBlaze Print Size'
+mb-size ipi-gsg.elf  |tee "ipi-gsg.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  24668	   1332	   3184	  29184	   7200	ipi-gsg.elf
+'Finished building: ipi-gsg.elf.size'
+' '
+11:01:41 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:02:53 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:03:35 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:10:26 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
+11:11:09 **** Incremental Build of configuration Debug for project ipi-gsg ****
+make all 
+make: Nothing to be done for `all'.
